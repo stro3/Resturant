@@ -1,0 +1,23 @@
+{
+  "name": "gastronome-restaurant",
+  "version": "1.0.0",
+  "description": "Gastronome Restaurant - Multi-Experience Dining Platform",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && python app.py",
+    "frontend": "cd nextjs-frontend && npm run dev",
+    "install:all": "cd nextjs-frontend && npm install",
+    "build": "cd nextjs-frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "restaurant",
+    "nextjs",
+    "flask",
+    "fullstack"
+  ],
+  "author": "Gastronome",
+  "license": "MIT"
+}

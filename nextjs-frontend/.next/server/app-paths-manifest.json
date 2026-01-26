@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/experiences/page": "app/experiences/page.js",
+  "/menu/page": "app/menu/page.js",
+  "/order/page": "app/order/page.js",
+  "/reservation/page": "app/reservation/page.js",
+  "/live-kitchen/page": "app/live-kitchen/page.js"
+}

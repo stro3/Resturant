@@ -1,0 +1,218 @@
+.events-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/events-bg.jpg') center/cover;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.events-header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.events-page {
+  padding-bottom: 80px;
+}
+
+.upcoming-events,
+.special-offers,
+.loyalty-program {
+  padding: 64px 0;
+}
+
+.no-events {
+  text-align: center;
+  padding: 64px;
+  font-size: 18px;
+  color: #999;
+}
+
+.event-card {
+  overflow: hidden;
+}
+
+.event-image {
+  height: 240px;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.event-content {
+  padding: 24px;
+}
+
+.event-content h3 {
+  font-size: 24px;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.event-meta {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.event-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  position: relative;
+}
+
+.offer-card h3 {
+  font-size: 24px;
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.offer-time {
+  font-size: 14px;
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.offer-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.offer-badge {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 16px;
+  background: #d4af37;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.newsletter-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  border-radius: 16px;
+  margin: 64px 0;
+}
+
+.newsletter-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.newsletter-content h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.newsletter-content p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #ccc;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.newsletter-form input::placeholder {
+  color: #999;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.loyalty-info {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.loyalty-description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.loyalty-benefits {
+  margin-bottom: 40px;
+}
+
+.benefit-item {
+  padding: 32px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.benefit-item h3 {
+  font-size: 20px;
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+.benefit-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.join-btn {
+  padding: 14px 48px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .events-header h1 {
+    font-size: 32px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .event-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

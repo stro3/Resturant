@@ -1,0 +1,146 @@
+.ai-recommendation-widget {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 48px;
+  border-radius: 16px;
+  color: #fff;
+  margin: 48px 0;
+}
+
+.ai-recommendation-widget h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.ai-recommendation-widget > p {
+  font-size: 18px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+.recommendation-form {
+  background: rgba(255,255,255,0.15);
+  padding: 32px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.form-section {
+  margin-bottom: 28px;
+}
+
+.form-section label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.mood-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mood-btn,
+.spice-btn {
+  padding: 10px 24px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.mood-btn.active,
+.spice-btn.active {
+  background: #fff;
+  color: #764ba2;
+  border-color: #fff;
+}
+
+.spice-slider {
+  display: flex;
+  gap: 12px;
+}
+
+.dietary-checkboxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.recommend-btn {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.recommendations-result {
+  margin-top: 32px;
+}
+
+.recommendations-result h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.recommended-items {
+  display: grid;
+  gap: 16px;
+}
+
+.recommended-item {
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  border-radius: 12px;
+  color: #2c2c2c;
+}
+
+.recommended-item h4 {
+  font-size: 20px;
+  color: #764ba2;
+  margin-bottom: 8px;
+}
+
+.recommended-item p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.rec-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+@media screen and (max-width: 768px) {
+  .ai-recommendation-widget {
+    padding: 32px 24px;
+  }
+
+  .recommendation-form {
+    padding: 24px;
+  }
+
+  .mood-buttons,
+  .spice-slider {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,159 @@
+.reviews-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/reviews-bg.jpg') center/cover;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.reviews-header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.reviews-page {
+  padding-bottom: 80px;
+}
+
+.reviews-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 64px 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 12px;
+}
+
+.stat-card h3 {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 18px;
+}
+
+.write-review-section {
+  text-align: center;
+  margin: 64px 0;
+}
+
+.review-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.review-form-container h2 {
+  font-size: 28px;
+  margin-bottom: 32px;
+  color: #2c2c2c;
+  text-align: left;
+}
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+  font-size: 32px;
+}
+
+.star {
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.clickable {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.star.clickable:hover {
+  transform: scale(1.2);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.reviews-list {
+  margin-top: 64px;
+}
+
+.reviews-list h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: #2c2c2c;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 64px;
+  font-size: 18px;
+  color: #999;
+}
+
+.review-card {
+  padding: 24px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.reviewer-info h3 {
+  font-size: 20px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+  font-size: 16px;
+}
+
+.review-date {
+  font-size: 14px;
+  color: #999;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-header h1 {
+    font-size: 32px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .review-form-container {
+    padding: 24px;
+  }
+}

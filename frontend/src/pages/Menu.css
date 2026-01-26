@@ -1,0 +1,175 @@
+.menu-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/menu-bg.jpg') center/cover;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.menu-header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.menu-page {
+  padding-bottom: 80px;
+}
+
+.filters {
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.category-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #fff;
+}
+
+.filter-btn:hover {
+  border-color: #d4af37;
+}
+
+.dietary-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dietary-filter label {
+  font-weight: 600;
+}
+
+.dietary-filter select {
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item-image {
+  height: 220px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu-item-content {
+  padding: 24px;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.menu-item-header h3 {
+  font-size: 20px;
+  color: #2c2c2c;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4af37;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.item-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #4a9d4a;
+}
+
+.pairing-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.pairing-btn:hover {
+  background: #d4af37;
+  border-color: #d4af37;
+  color: #fff;
+}
+
+.pairing-suggestions {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.pairing-suggestions strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+}
+
+.pairing-suggestions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pairing-suggestions li {
+  padding: 4px 0;
+  color: #666;
+}
+
+.no-items {
+  text-align: center;
+  padding: 64px;
+  font-size: 18px;
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu-header h1 {
+    font-size: 32px;
+  }
+}
