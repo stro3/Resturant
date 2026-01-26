@@ -1,7 +1,12 @@
 node_modules
 dist
 .env
+.env.local
 venv
 __pycache__
 *.pyc
 .DS_Store
+.next
+.next/cache
+.next/trace
+*.pack.gz
