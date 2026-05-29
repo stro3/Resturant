@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { FaUtensils, FaCalendarAlt, FaShoppingBag, FaEnvelope, FaChartLine, FaDollarSign, FaUsers, FaClock } from 'react-icons/fa'
+import { FaUtensils, FaCalendarAlt, FaShoppingBag, FaEnvelope, FaChartLine, FaUsers, FaClock } from 'react-icons/fa'
 
 interface Stats {
   totalOrders: number
@@ -32,7 +32,7 @@ export default function AdminDashboard() {
   ]
 
   const statCards = [
-    { title: 'Total Revenue', value: `$${stats.totalRevenue.toFixed(2)}`, icon: FaDollarSign, color: 'text-green-600', bg: 'bg-green-100' },
+    { title: 'Total Revenue', value: `₹${stats.totalRevenue.toFixed(2)}`, icon: FaChartLine, color: 'text-green-600', bg: 'bg-green-100' },
     { title: 'Total Orders', value: stats.totalOrders, icon: FaShoppingBag, color: 'text-blue-600', bg: 'bg-blue-100' },
     { title: 'Reservations', value: stats.totalReservations, icon: FaCalendarAlt, color: 'text-purple-600', bg: 'bg-purple-100' },
     { title: 'Pending Orders', value: stats.pendingOrders, icon: FaClock, color: 'text-orange-600', bg: 'bg-orange-100' },
@@ -130,7 +130,7 @@ export default function AdminDashboard() {
                     <p className="text-sm text-gray-500">{order.customer}</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-semibold text-burgundy">${order.total}</p>
+                    <p className="font-semibold text-burgundy">₹{order.total}</p>
                     <p className={`text-xs ${order.status === 'Preparing' ? 'text-orange-500' : 'text-green-500'}`}>
                       {order.status}
                     </p>

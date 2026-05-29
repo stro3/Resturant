@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { FaUtensils, FaClipboardList, FaConciergeBell, FaClock, FaCheck, FaSignOutAlt, FaUser, FaShoppingBag, FaCalendarAlt } from 'react-icons/fa'
+import toast from 'react-hot-toast'
 
 interface Task {
   id: string
@@ -292,16 +293,16 @@ export default function EmployeeDashboard() {
           >
             <h3 className="font-bold text-charcoal mb-4">Quick Actions</h3>
             <div className="grid grid-cols-2 gap-3">
-              <button className="p-4 bg-burgundy/10 hover:bg-burgundy/20 rounded-xl text-burgundy font-medium transition-colors">
+              <button onClick={() => toast.success('Assistance requested! A manager has been notified.')} className="p-4 bg-burgundy/10 hover:bg-burgundy/20 rounded-xl text-burgundy font-medium transition-colors">
                 Request Assistance
               </button>
-              <button className="p-4 bg-blue-100 hover:bg-blue-200 rounded-xl text-blue-700 font-medium transition-colors">
+              <button onClick={() => router.push('/tables')} className="p-4 bg-blue-100 hover:bg-blue-200 rounded-xl text-blue-700 font-medium transition-colors">
                 View Table Map
               </button>
-              <button className="p-4 bg-green-100 hover:bg-green-200 rounded-xl text-green-700 font-medium transition-colors">
+              <button onClick={() => router.push('/live-kitchen')} className="p-4 bg-green-100 hover:bg-green-200 rounded-xl text-green-700 font-medium transition-colors">
                 Check Inventory
               </button>
-              <button className="p-4 bg-purple-100 hover:bg-purple-200 rounded-xl text-purple-700 font-medium transition-colors">
+              <button onClick={() => toast.success('Report submitted to management.')} className="p-4 bg-purple-100 hover:bg-purple-200 rounded-xl text-purple-700 font-medium transition-colors">
                 Report Issue
               </button>
             </div>

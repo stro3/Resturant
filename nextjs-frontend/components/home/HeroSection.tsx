@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaStar, FaPlay, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 
@@ -115,9 +116,11 @@ export default function HeroSection() {
                   <span className="text-amber-400 font-semibold">Today's Special</span>
                   <span className="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm">Limited</span>
                 </div>
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400"
                   alt="Featured Dish"
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover rounded-2xl mb-6"
                 />
                 <h3 className="text-white text-2xl font-bold mb-2">Chef's Tasting Menu</h3>
@@ -126,8 +129,8 @@ export default function HeroSection() {
                 </p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-white/50 text-sm line-through">$180</span>
-                    <span className="text-amber-400 text-2xl font-bold ml-2">$149</span>
+                    <span className="text-white/50 text-sm line-through">₹14,999</span>
+                    <span className="text-amber-400 text-2xl font-bold ml-2">₹12,499</span>
                     <span className="text-white/50 text-sm">/person</span>
                   </div>
                   <Link

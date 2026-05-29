@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: FaPhone,
     title: 'Reservations',
-    details: ['+1 (212) 736-3100', 'Concierge: +1 (212) 736-3101'],
+    details: ['+91 22 4000 1234', 'Concierge: +91 22 4000 1235'],
     highlight: 'Available 24/7'
   },
   {

@@ -163,7 +163,7 @@ export default function AdminOrders() {
                   <p className="text-sm text-gray-500">{order.customer} • {order.time}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-2xl font-bold text-burgundy">${order.total.toFixed(2)}</p>
+                  <p className="text-2xl font-bold text-burgundy">₹{order.total.toFixed(2)}</p>
                 </div>
               </div>
 
@@ -172,7 +172,7 @@ export default function AdminOrders() {
                 {order.items.map((item, idx) => (
                   <div key={idx} className="flex justify-between text-sm py-1">
                     <span>{item.quantity}x {item.name}</span>
-                    <span className="font-medium">${(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="font-medium">₹{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>

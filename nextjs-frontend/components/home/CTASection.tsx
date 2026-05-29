@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaCalendarAlt, FaPhone, FaGift, FaEnvelope } from 'react-icons/fa'
 
@@ -9,10 +10,11 @@ export default function CTASection() {
     <section className="py-24 relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
+        <Image
           src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920"
           alt="Restaurant interior"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-charcoal/90" />
       </div>

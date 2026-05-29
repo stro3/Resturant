@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaStar, FaFire, FaShoppingCart, FaArrowRight } from 'react-icons/fa'
 
@@ -64,9 +65,11 @@ export default function FeaturedDishes() {
               <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
                 {/* Image Container */}
                 <div className="relative h-64 overflow-hidden">
-                  <img
+                  <Image
                     src={dish.image}
                     alt={dish.name}
+                    width={500}
+                    height={256}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -101,7 +104,7 @@ export default function FeaturedDishes() {
                   <p className="text-gray-500 text-sm mb-4 line-clamp-2">{dish.description}</p>
                   
                   <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                    <span className="text-2xl font-bold text-charcoal">${dish.price}</span>
+                    <span className="text-2xl font-bold text-charcoal">₹{dish.price}</span>
                     <Link
                       href="/order"
                       className="flex items-center gap-2 bg-charcoal hover:bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium transition-all group/btn"

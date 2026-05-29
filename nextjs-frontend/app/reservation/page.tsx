@@ -151,7 +151,7 @@ export default function ReservationPage() {
           <p className="text-gray-600 mb-6">
             Questions? Call our concierge
             <br />
-            <span className="text-amber-600 font-semibold text-lg">+1 (212) 736-3100</span>
+            <span className="text-amber-600 font-semibold text-lg">+91 22 4000 1234</span>
           </p>
           
           <button
@@ -299,7 +299,7 @@ export default function ReservationPage() {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all text-lg"
-                    placeholder="+1 (212) 555-0123"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
               </motion.div>
@@ -343,8 +343,8 @@ export default function ReservationPage() {
           {/* Contact Info */}
           <div className="mt-8 text-center">
             <p className="text-gray-500 text-sm mb-2">Prefer to speak with us directly?</p>
-            <a href="tel:+12127363100" className="text-amber-600 font-semibold text-lg hover:text-amber-700 transition-colors">
-              +1 (212) 736-3100
+            <a href="tel:+912240001234" className="text-amber-600 font-semibold text-lg hover:text-amber-700 transition-colors">
+              +91 22 4000 1234
             </a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { FaPlay, FaPause, FaExpand, FaShieldAlt, FaLeaf, FaUserTie, FaAward, FaCertificate, FaVideo } from 'react-icons/fa'
 
@@ -37,6 +37,15 @@ const certifications = [
 
 export default function LiveKitchenPage() {
   const [isPlaying, setIsPlaying] = useState(false)
+  const videoContainerRef = useRef<HTMLDivElement>(null)
+
+  const toggleFullscreen = () => {
+    if (!document.fullscreenElement && videoContainerRef.current) {
+      videoContainerRef.current.requestFullscreen()
+    } else if (document.fullscreenElement) {
+      document.exitFullscreen()
+    }
+  }
 
   return (
     <div className="min-h-screen bg-warmWhite pt-24">
@@ -71,6 +80,7 @@ export default function LiveKitchenPage() {
       <section className="py-16 bg-charcoal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+            ref={videoContainerRef}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-charcoal to-black border border-cream/20"
@@ -103,7 +113,7 @@ export default function LiveKitchenPage() {
                 </div>
                 <span className="text-cream/80 text-sm">Main Kitchen - Station 1</span>
               </div>
-              <button className="text-cream/80 hover:text-cream p-2 transition-colors">
+              <button onClick={toggleFullscreen} className="text-cream/80 hover:text-cream p-2 transition-colors">
                 <FaExpand className="text-xl" />
               </button>
             </div>

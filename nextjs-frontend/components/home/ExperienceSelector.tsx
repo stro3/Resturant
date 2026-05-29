@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaUtensils, FaCoffee, FaWineGlassAlt, FaConciergeBell, FaGlassCheers } from 'react-icons/fa'
 
@@ -10,7 +11,7 @@ const experiences = [
     name: 'Tasting Menu',
     icon: FaUtensils,
     description: '7-course chef\'s selection',
-    price: 'From $149/person',
+    price: 'From ₹12,499/person',
     image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600'
   },
   {
@@ -18,7 +19,7 @@ const experiences = [
     name: 'Wine Pairing',
     icon: FaWineGlassAlt,
     description: 'Sommelier curated selection',
-    price: 'Add $75/person',
+    price: 'Add ₹6,249/person',
     image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=600'
   },
   {
@@ -26,7 +27,7 @@ const experiences = [
     name: 'Private Dining',
     icon: FaConciergeBell,
     description: 'Exclusive chef\'s table experience',
-    price: 'Starting $2,500',
+    price: 'Starting ₹2,00,000',
     image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600'
   },
   {
@@ -34,7 +35,7 @@ const experiences = [
     name: 'Weekend Brunch',
     icon: FaCoffee,
     description: 'Leisurely weekend indulgence',
-    price: 'From $65/person',
+    price: 'From ₹5,399/person',
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600'
   },
   {
@@ -79,10 +80,11 @@ export default function ExperienceSelector() {
             >
               <Link href={`/menu?experience=${exp.id}`}>
                 <div className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all">
-                  <img 
+                  <Image
                     src={exp.image}
                     alt={exp.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-70 group-hover:opacity-80 transition-opacity" />
                   

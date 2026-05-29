@@ -236,7 +236,7 @@ export default function SignupPage() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full pl-12 pr-4 py-3.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                  placeholder="+1 (212) 555-0123"
+                  placeholder="+91 98765 43210"
                 />
               </div>
             </div>

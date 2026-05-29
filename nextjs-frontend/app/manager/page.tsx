@@ -12,7 +12,6 @@ import {
   FaCalendarAlt, 
   FaCog, 
   FaSignOutAlt,
-  FaDollarSign,
   FaStar,
   FaEye,
   FaClock
@@ -85,7 +84,7 @@ export default function ManagerDashboard() {
   }
 
   const todayStats = [
-    { label: 'Total Revenue', value: `$${recentOrders.reduce((sum, o) => sum + (parseFloat(o.total) || 0), 0).toFixed(2)}`, change: '+12%', icon: FaDollarSign, color: 'text-green-600' },
+    { label: 'Total Revenue', value: `₹${recentOrders.reduce((sum, o) => sum + (parseFloat(o.total) || 0), 0).toFixed(2)}`, change: '+12%', icon: FaShoppingBag, color: 'text-green-600' },
     { label: 'Orders Today', value: recentOrders.length.toString(), change: '+8%', icon: FaShoppingBag, color: 'text-blue-600' },
     { label: 'Reservations', value: upcomingReservations.length.toString(), change: '+15%', icon: FaCalendarAlt, color: 'text-purple-600' },
     { label: 'Average Rating', value: '4.8', change: '+0.2', icon: FaStar, color: 'text-yellow-600' },
@@ -209,7 +208,7 @@ export default function ManagerDashboard() {
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold text-charcoal">${parseFloat(order.total || 0).toFixed(2)}</p>
+                      <p className="font-semibold text-charcoal">₹{parseFloat(order.total || 0).toFixed(2)}</p>
                       <span className={`text-xs px-2 py-1 rounded ${getStatusColor(order.status)}`}>
                         {order.status}
                       </span>

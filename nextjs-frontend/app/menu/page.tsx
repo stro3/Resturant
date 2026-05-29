@@ -340,7 +340,7 @@ export default function MenuPage() {
                         <h3 className="text-xl font-bold text-charcoal group-hover:text-amber-600 transition-colors">{item.name}</h3>
                         <span className="text-amber-600 text-xs font-medium uppercase tracking-wider">{item.category}</span>
                       </div>
-                      <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-yellow-500">${item.price}</span>
+                      <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-yellow-500">₹{item.price}</span>
                     </div>
                     <p className="text-gray-500 text-sm mb-5 line-clamp-2">{item.description}</p>
 

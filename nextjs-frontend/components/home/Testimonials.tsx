@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const testimonials = [
@@ -49,10 +50,29 @@ export default function Testimonials() {
 
   useEffect(() => {
     if (!autoPlay) return
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(timer)
+    let timer: NodeJS.Timeout
+
+    const startTimer = () => {
+      timer = setInterval(() => {
+        setCurrent((prev) => (prev + 1) % testimonials.length)
+      }, 5000)
+    }
+
+    const handleVisibility = () => {
+      if (document.hidden) {
+        clearInterval(timer)
+      } else {
+        startTimer()
+      }
+    }
+
+    startTimer()
+    document.addEventListener('visibilitychange', handleVisibility)
+
+    return () => {
+      clearInterval(timer)
+      document.removeEventListener('visibilitychange', handleVisibility)
+    }
   }, [autoPlay])
 
   const next = () => {
@@ -110,9 +130,11 @@ export default function Testimonials() {
 
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div className="flex items-center gap-4">
-                  <img
+                  <Image
                     src={testimonials[current].avatar}
                     alt={testimonials[current].name}
+                    width={56}
+                    height={56}
                     className="w-14 h-14 rounded-full object-cover border-2 border-amber-400"
                   />
                   <div>

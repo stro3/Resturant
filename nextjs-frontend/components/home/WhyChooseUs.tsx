@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { FaLeaf, FaAward, FaClock, FaHeart, FaShieldAlt, FaTruck, FaCheck } from 'react-icons/fa'
 
 const features = [
@@ -97,10 +98,11 @@ export default function WhyChooseUs() {
             className="relative"
           >
             <div className="relative h-[600px] rounded-2xl overflow-hidden">
-              <img 
+              <Image
                 src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=800"
                 alt="Chef preparing dish"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
             </div>

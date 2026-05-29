@@ -13,7 +13,7 @@ const experiences = [
     icon: FaWineGlassAlt,
     image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800',
     features: ['5-Course Tasting Menu', 'Sommelier Wine Pairing', 'Private Dining Rooms', 'Chef\'s Table Experience'],
-    priceRange: '$$$',
+    priceRange: '₹ ₹',
     timing: '6:00 PM - 11:00 PM',
     rating: 4.9,
     reviews: 847
@@ -26,7 +26,7 @@ const experiences = [
     icon: FaHamburger,
     image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800',
     features: ['Gourmet Burgers', 'Hand-Cut Fries', 'Craft Shakes', 'Express Service'],
-    priceRange: '$',
+    priceRange: '₹',
     timing: '11:00 AM - 11:00 PM',
     rating: 4.7,
     reviews: 2341
@@ -39,7 +39,7 @@ const experiences = [
     icon: FaCoffee,
     image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800',
     features: ['Single Origin Coffee', 'Fresh Pastries', 'Artisan Sandwiches', 'Free WiFi'],
-    priceRange: '$$',
+    priceRange: '₹₹',
     timing: '7:00 AM - 9:00 PM',
     rating: 4.8,
     reviews: 1562
@@ -52,7 +52,7 @@ const experiences = [
     icon: FaPizzaSlice,
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800',
     features: ['Global Cuisines', 'Traditional Recipes', 'Live Cooking', 'Vegetarian Options'],
-    priceRange: '$',
+    priceRange: '₹',
     timing: '12:00 PM - 10:00 PM',
     rating: 4.6,
     reviews: 1893
@@ -65,7 +65,7 @@ const experiences = [
     icon: FaBox,
     image: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800',
     features: ['30-Min Delivery', 'Eco-Friendly Packaging', 'Family Packs', 'Late Night Menu'],
-    priceRange: '$$',
+    priceRange: '₹₹',
     timing: '10:00 AM - 2:00 AM',
     rating: 4.5,
     reviews: 3214

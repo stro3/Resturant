@@ -6,12 +6,12 @@ import { FaShoppingCart, FaPlus, FaMinus, FaTrash, FaMotorcycle, FaClock, FaMapM
 import Link from 'next/link'
 
 const popularItems = [
-  { id: 1, name: 'Wagyu Beef Burger', price: 24.99, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300', time: '20 min' },
-  { id: 2, name: 'Truffle Risotto', price: 32.99, image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=300', time: '25 min' },
-  { id: 3, name: 'Butter Chicken', price: 17.99, image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=300', time: '30 min' },
-  { id: 4, name: 'Pad Thai', price: 15.99, image: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=300', time: '20 min' },
-  { id: 5, name: 'Grilled Salmon', price: 28.99, image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=300', time: '25 min' },
-  { id: 6, name: 'Chocolate Lava Cake', price: 10.99, image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=300', time: '15 min' },
+  { id: 1, name: 'Wagyu Beef Burger', price: 2099, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300', time: '20 min' },
+  { id: 2, name: 'Truffle Risotto', price: 2749, image: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=300', time: '25 min' },
+  { id: 3, name: 'Butter Chicken', price: 1499, image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=300', time: '30 min' },
+  { id: 4, name: 'Pad Thai', price: 1299, image: 'https://images.unsplash.com/photo-1559314809-0d155014e29e?w=300', time: '20 min' },
+  { id: 5, name: 'Grilled Salmon', price: 2399, image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=300', time: '25 min' },
+  { id: 6, name: 'Chocolate Lava Cake', price: 899, image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=300', time: '15 min' },
 ]
 
 interface CartItem {
@@ -115,7 +115,7 @@ export default function OrderPage() {
   }
 
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  const deliveryFee = subtotal > 50 ? 0 : 4.99
+  const deliveryFee = subtotal > 4000 ? 0 : 399
   const total = subtotal + deliveryFee
 
   return (
@@ -157,7 +157,7 @@ export default function OrderPage() {
             </div>
             <div className="flex items-center gap-2 text-charcoal/70">
               <FaMotorcycle className="text-burgundy" />
-              <span>Free delivery over $50</span>
+              <span>Free delivery over ₹4000</span>
             </div>
           </motion.div>
         </div>
@@ -192,7 +192,7 @@ export default function OrderPage() {
                         </div>
                       </div>
                       <div className="flex items-center justify-between mt-2">
-                        <span className="text-lg font-bold text-burgundy">${item.price}</span>
+                        <span className="text-lg font-bold text-burgundy">₹{item.price}</span>
                         <button
                           onClick={() => addToCart(item)}
                           className="bg-burgundy hover:bg-primary text-white p-2 rounded-full transition-all"
@@ -235,7 +235,7 @@ export default function OrderPage() {
                           <img src={item.image} alt={item.name} className="w-16 h-16 rounded-lg object-cover" />
                           <div className="flex-1">
                             <h4 className="font-medium text-charcoal text-sm">{item.name}</h4>
-                            <p className="text-burgundy font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                            <p className="text-burgundy font-semibold">₹{(item.price * item.quantity).toFixed(2)}</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <button
@@ -305,7 +305,7 @@ export default function OrderPage() {
                             type="tel"
                             value={customerPhone}
                             onChange={(e) => setCustomerPhone(e.target.value)}
-                            placeholder="+1 (555) 123-4567"
+                            placeholder="+91 98765 43210"
                             className="w-full px-4 py-3 border border-cream rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy"
                           />
                         </div>
@@ -329,15 +329,15 @@ export default function OrderPage() {
                     <div className="space-y-2 mb-6 text-sm">
                       <div className="flex justify-between text-charcoal/70">
                         <span>Subtotal</span>
-                        <span>${subtotal.toFixed(2)}</span>
+                        <span>₹{subtotal.toFixed(2)}</span>
                       </div>
                       <div className="flex justify-between text-charcoal/70">
                         <span>Delivery Fee</span>
-                        <span>{deliveryFee === 0 ? 'FREE' : `$${deliveryFee.toFixed(2)}`}</span>
+                        <span>{deliveryFee === 0 ? 'FREE' : `₹${deliveryFee.toFixed(2)}`}</span>
                       </div>
                       <div className="flex justify-between text-lg font-bold text-charcoal pt-2 border-t border-cream">
                         <span>Total</span>
-                        <span>${total.toFixed(2)}</span>
+                        <span>₹{total.toFixed(2)}</span>
                       </div>
                     </div>
 
@@ -346,7 +346,7 @@ export default function OrderPage() {
                       disabled={isOrdering || cart.length === 0}
                       className="w-full bg-burgundy hover:bg-primary text-white py-4 rounded-full font-semibold transition-all shadow-md disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      {isOrdering ? 'Processing...' : `Place Order - $${total.toFixed(2)}`}
+                      {isOrdering ? 'Processing...' : `Place Order - ₹${total.toFixed(2)}`}
                     </button>
                   </>
                 )}

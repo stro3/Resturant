@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaPlay, FaAward, FaLeaf, FaUtensils } from 'react-icons/fa'
 
@@ -38,10 +39,11 @@ export default function LiveKitchenPreview() {
             className="relative order-2 lg:order-1"
           >
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+              <Image
                 src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800"
                 alt="Kitchen in action"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/30" />
               
@@ -73,7 +75,7 @@ export default function LiveKitchenPreview() {
                   transition={{ delay: 0.3 + i * 0.1 }}
                   className="bg-white p-3 rounded-xl shadow-lg mb-3 flex items-center gap-3"
                 >
-                  <img src={chef.image} alt={chef.name} className="w-12 h-12 rounded-lg object-cover" />
+                  <Image src={chef.image} alt={chef.name} width={48} height={48} className="w-12 h-12 rounded-lg object-cover" />
                   <div>
                     <p className="text-charcoal font-semibold text-sm">{chef.name}</p>
                     <p className="text-gray-500 text-xs">{chef.specialty}</p>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { FaUser, FaHistory, FaCalendarAlt, FaShoppingBag, FaCog, FaSignOutAlt, FaUtensils, FaDollarSign } from 'react-icons/fa'
+import { FaUser, FaHistory, FaCalendarAlt, FaShoppingBag, FaCog, FaSignOutAlt, FaUtensils } from 'react-icons/fa'
 
 interface User {
   name: string
@@ -168,7 +168,7 @@ export default function CustomerDashboard() {
                       <p className="text-sm text-gray-500">{new Date(order.created_at).toLocaleDateString()}</p>
                     </div>
                     <div className="text-right">
-                      <p className="font-semibold text-burgundy">${order.total}</p>
+                      <p className="font-semibold text-burgundy">₹{order.total}</p>
                       <p className={`text-xs ${
                         order.status === 'delivered' ? 'text-green-600' :
                         order.status === 'in-progress' ? 'text-yellow-600' :

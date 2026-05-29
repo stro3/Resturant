@@ -164,7 +164,7 @@ export default function AdminMenu() {
                   )}
                 </div>
                 <p className="text-sm text-gray-500 mb-1">{item.description}</p>
-                <p className="text-lg font-bold text-burgundy">${item.price.toFixed(2)}</p>
+                <p className="text-lg font-bold text-burgundy">₹{item.price.toFixed(2)}</p>
               </div>
               <div className="flex items-center gap-2">
                 <button
